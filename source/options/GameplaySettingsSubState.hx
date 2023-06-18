@@ -51,7 +51,14 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
-
+		
+		var option:Option = new Option('Barcolors', //Name
+			'If checked, notes go Down instead of Up, simple enough.', //Description
+			'barColors', //Save data variable name
+			'bool', //Variable type
+			false); //Default value
+		addOption(option);
+		
 		var option:Option = new Option('Middlescroll',
 			'If checked, your notes get centered.',
 			'middleScroll',
