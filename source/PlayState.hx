@@ -1037,6 +1037,11 @@ class PlayState extends MusicBeatState
 		add(timeBar);
 		add(timeTxt);
 		timeBarBG.sprTracker = timeBar;
+	        if (FlxG.save.data.barColors)
+			timeBar.createFilledBar(dad.barColor, boyfriend.barColor);
+		else
+			timeBar.createFilledBar(FlxColor.GRAY, FlxColor.fromRGB(57, 255, 20));
+		insert(members.indexOf(timeBarBG), timeBar);
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
